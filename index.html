@@ -15,7 +15,7 @@
 
     .container {
       width: 100%;
-      max-width: 600px; /* rapi kalau dibuka di laptop */
+      max-width: 600px;
       margin: auto;
     }
 
@@ -28,45 +28,22 @@
 </head>
 <body>
 
-  <div class="container">
-    <img src="menu-01.jpg" alt="">
-    <img src="menu-02.jpg" alt="">
-    <img src="menu-03.jpg" alt="">
-    <img src="menu-04.jpg" alt="">
-    <img src="menu-05.jpg" alt="">
-    <img src="menu-06.jpg" alt="">
-    <img src="menu-07.jpg" alt="">
-    <img src="menu-08.jpg" alt="">
-    <img src="menu-09.jpg" alt="">
-    <img src="menu-10.jpg" alt="">
-    <img src="menu-11.jpg" alt="">
-    <img src="menu-12.jpg" alt="">
-    <img src="menu-13.jpg" alt="">
-    <img src="menu-14.jpg" alt="">
-    <img src="menu-15.jpg" alt="">
-    <img src="menu-16.jpg" alt="">
-    <img src="menu-17.jpg" alt="">
-    <img src="menu-18.jpg" alt="">
-    <img src="menu-19.jpg" alt="">
-    <img src="menu-20.jpg" alt="">
-    <img src="menu-21.jpg" alt="">
-    <img src="menu-22.jpg" alt="">
-    <img src="menu-23.jpg" alt="">
-    <img src="menu-24.jpg" alt="">
-    <img src="menu-25.jpg" alt="">
-    <img src="menu-26.jpg" alt="">
-    <img src="menu-27.jpg" alt="">
-    <img src="menu-28.jpg" alt="">
-    <img src="menu-29.jpg" alt="">
-    <img src="menu-30.jpg" alt="">
-    <img src="menu-31.jpg" alt="">
-    <img src="menu-32.jpg" alt="">
-    <img src="menu-33.jpg" alt="">
-    <img src="menu-34.jpg" alt="">
-    <img src="menu-35.jpg" alt="">
-    <img src="menu-36.jpg" alt="">
-    <img src="menu-37.jpg" alt="">
-  </div>
+  <div class="container" id="menu"></div>
+
+  <script>
+    const container = document.getElementById("menu");
+    const totalImages = 37;
+
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement("img");
+
+      const number = String(i).padStart(2, "0");
+      img.src = `asset/menu-${number}.jpg`;
+      img.alt = `Menu ${i}`;
+
+      container.appendChild(img);
+    }
+  </script>
 
 </body>
 </html>
